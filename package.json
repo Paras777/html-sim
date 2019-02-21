@@ -1,0 +1,27 @@
+{
+  "name": "html",
+  "version": "1.0.0",
+  "description": "Doing the html ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paras777/html-sim.git"
+  },
+  "keywords": [
+    "HTML",
+    "SASS"
+  ],
+  "author": "Paras Verma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Paras777/html-sim/issues"
+  },
+  "homepage": "https://github.com/Paras777/html-sim#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2"
+  }
+}
