@@ -21,7 +21,22 @@
   },
   "homepage": "https://github.com/Paras777/html-sim#readme",
   "devDependencies": {
+    "browser-sync": "^2.26.3",
     "gulp": "^4.0.0",
-    "gulp-sass": "^4.0.2"
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-bootstrap": "^2.0.3",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-inject-partials": "^1.0.4",
+    "gulp-minify": "^3.1.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "jquery": "^3.3.1",
+    "merge-stream": "^1.0.1",
+    "mustache": "^3.0.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6"
   }
 }
