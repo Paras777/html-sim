@@ -1,6 +1,7 @@
 .nav-tabs {
-    border-bottom: solid 2px #d1d1d1;
+    border-bottom: solid 1px $borderSeparatorColor;
     margin-bottom: 1rem;
+    overflow: hidden;
     > li {
       &.active > a {
         border-width: 0;
@@ -11,23 +12,23 @@
         }
       }
       > a {
+        font-size: 1rem;
         position: relative;
         border: none;
-        color: #666;
-        text-transform: uppercase;
-        padding-bottom: 15px;
+        color: $fontColorGrey;
+        padding-bottom: 8px;
         text-align: left;
-        color: #171717;
       }
     }
   }
   
   .nav.nav-tabs > li > a {
-    color: #bbb;
+    color: $fontColorGrey;
     padding-left: 0;
     padding-right: 0;
     margin-right: 40px;
     border: 0 none;
+    white-space: nowrap;
   }
   
   .nav-tabs {
@@ -35,38 +36,38 @@
       &.active {
         > a, > a {
           border: none;
-          color: #d44e27;
+          color: $cyan;
           background: transparent;
         }
       }
       > a {
         &:hover {
           border: none;
-          color: #d44e27;
+          color: $cyan;
           background: transparent;
         }
         &::after {
           content: "";
-          background: #d44e27;
+          background: $cyan;
           height: 2px;
           position: absolute;
           width: 100%;
           left: 0px;
-          bottom: -1px;
+          bottom: 0;
           transition: all 250ms ease 0s;
           transform: scale(0);
         }
       }
       > a:hover {
         border: none;
-        color: #d44e27;
+        color: $cyan;
         background: transparent;
       }
     }
     .nav-link {
       &.active {
         border: none;
-        color: #d44e27;
+        color: $cyan;
         background: transparent;
         &::after {
           transform: scale(1);
@@ -75,7 +76,7 @@
       border: 0 none;
     }
     > li > a::after {
-      bottom: -1px;
+      bottom: 0px;
     }
     > li {
       &.active > a::after, &:hover > a::after {

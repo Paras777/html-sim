@@ -26,10 +26,44 @@
 
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 767px) {
+    .search-right-col{
+        max-width: 332px;
+        padding-left: 15px;
+    }
+    .search-left-col{
+        padding-right: 15px;
+    }
+}
 
+@media only screen and (max-width: 767px) {
+    
 }
 
 @media (max-width: 576px){
-
+    .search-left-col{
+        .result-single-col{
+            display: inherit !important;
+            text-align: center;
+            .contacts{
+                padding-left: 0;
+                a{
+                    img{
+                        float: none;
+                        display: inline; 
+                    }
+                }
+                .call{
+                    img{
+                        margin: -6px 3px 0 0;
+                    }
+                }
+                .e-mail{
+                    img{
+                        margin: -4px 3px 0 0;
+                    }
+                }
+            }
+        }
+    }
 }

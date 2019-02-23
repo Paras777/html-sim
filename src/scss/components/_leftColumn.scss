@@ -9,15 +9,22 @@
         letter-spacing: .7px;
         @extend %marginTop-3;
         @extend %fontWeight600;
+        .hightlight-color{
+            color: $cyan;
+        }
     }
     h6{
         font-size: 1rem;
-        color: $fontColorGreyHeading;
+        color: $fontColorGrey;
         @extend %marginTop-5;
         @extend %fontWeight600;
     }
     p{
         font-size: 0.9rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 98%;
         color: $fontColorGreyHeading;
         @extend %marginTop-5;
         @extend %fontWeight400;
@@ -26,17 +33,37 @@
         height: 64px;
         width: 64px;
     }
+    .sent-by{
+        font-size: .7rem;
+        margin-top: 2px;
+        span{
+            color: $cyan;
+        }
+    }
     .contacts{
         padding-top: 16px;
         a{
-            color: $cnay;
+            color: $cyan;
             display: block;
+            img{
+                float: left; 
+            }
         }
-        a.call{
-            // 
+        .call{
+            img{
+                margin: 4px 3px 0 0;
+            }
         }
-        a.e-mail{
-            // 
+        .e-mail{
+            img{
+                margin: 2px 3px 0 0;
+            }
         }
+    }
+}
+
+.search-left-col {
+    .result-single-col:last-child{
+        border-bottom: 0 none;
     }
 }

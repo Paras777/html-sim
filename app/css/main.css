@@ -9322,7 +9322,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   border: 0 none;
 }
 
-.result-single-col, .search-right-col h3 {
+.result-single-col, .search-right-col h5 {
   border-bottom: 1px solid #e2e2e2;
 }
 
@@ -9343,8 +9343,50 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 }
 
 body {
-  margin: 0;
+  margin: 20px 0;
   padding: 0;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:hover, img, button {
+  text-decoration: none;
+  outline: none;
+}
+
+h1, h2, h3, h4, h4, h5, h6, a {
+  padding: 0;
+  margin: 0;
+}
+
+@media only screen and (min-width: 767px) {
+  .search-right-col {
+    max-width: 332px;
+    padding-left: 15px;
+  }
+  .search-left-col {
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .search-left-col .result-single-col {
+    display: inherit !important;
+    text-align: center;
+  }
+  .search-left-col .result-single-col .contacts {
+    padding-left: 0;
+  }
+  .search-left-col .result-single-col .contacts a img {
+    float: none;
+    display: inline;
+  }
+  .search-left-col .result-single-col .contacts .call img {
+    margin: -6px 3px 0 0;
+  }
+  .search-left-col .result-single-col .contacts .e-mail img {
+    margin: -4px 3px 0 0;
+  }
 }
 
 html {
@@ -9367,19 +9409,36 @@ body {
   letter-spacing: .7px;
 }
 
+.result-single-col span.text-caps .hightlight-color {
+  color: #19b491;
+}
+
 .result-single-col h6 {
   font-size: 1rem;
-  color: #3a3a3a;
+  color: #3c3c3c;
 }
 
 .result-single-col p {
   font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 98%;
   color: #3a3a3a;
 }
 
 .result-single-col .image-size {
   height: 64px;
   width: 64px;
+}
+
+.result-single-col .sent-by {
+  font-size: .7rem;
+  margin-top: 2px;
+}
+
+.result-single-col .sent-by span {
+  color: #19b491;
 }
 
 .result-single-col .contacts {
@@ -9391,8 +9450,20 @@ body {
   display: block;
 }
 
-.search-right-col {
-  width: 332px;
+.result-single-col .contacts a img {
+  float: left;
+}
+
+.result-single-col .contacts .call img {
+  margin: 4px 3px 0 0;
+}
+
+.result-single-col .contacts .e-mail img {
+  margin: 2px 3px 0 0;
+}
+
+.search-left-col .result-single-col:last-child {
+  border-bottom: 0 none;
 }
 
 .search-right-col .image-size {
@@ -9404,18 +9475,41 @@ body {
   color: #19b491;
 }
 
-.search-right-col h3 {
+.search-right-col .result-single-col h6 {
+  font-size: .9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.search-right-col h5 {
   padding-bottom: 0.6rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.search-right-col a {
+  color: #19b491;
+}
+
+.search-right-col a .view-all {
+  margin: 0 0 0 0;
 }
 
 .borderLeft {
   border-left: 1px solid #e2e2e2;
 }
 
+.media-body {
+  min-width: 0;
+}
+
 .nav-tabs {
-  border-bottom: solid 2px #d1d1d1;
+  border-bottom: solid 1px #e2e2e2;
   margin-bottom: 1rem;
+  overflow: hidden;
 }
 
 .nav-tabs > li.active > a {
@@ -9429,50 +9523,50 @@ body {
 }
 
 .nav-tabs > li > a {
+  font-size: 1rem;
   position: relative;
   border: none;
-  color: #666;
-  text-transform: uppercase;
-  padding-bottom: 15px;
+  color: #3c3c3c;
+  padding-bottom: 8px;
   text-align: left;
-  color: #171717;
 }
 
 .nav.nav-tabs > li > a {
-  color: #bbb;
+  color: #3c3c3c;
   padding-left: 0;
   padding-right: 0;
   margin-right: 40px;
   border: 0 none;
+  white-space: nowrap;
 }
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a {
   border: none;
-  color: #d44e27;
+  color: #19b491;
   background: transparent;
 }
 
 .nav-tabs > li > a:hover {
   border: none;
-  color: #d44e27;
+  color: #19b491;
   background: transparent;
 }
 
 .nav-tabs > li > a::after {
   content: "";
-  background: #d44e27;
+  background: #19b491;
   height: 2px;
   position: absolute;
   width: 100%;
   left: 0px;
-  bottom: -1px;
+  bottom: 0;
   transition: all 250ms ease 0s;
   transform: scale(0);
 }
 
 .nav-tabs > li > a:hover {
   border: none;
-  color: #d44e27;
+  color: #19b491;
   background: transparent;
 }
 
@@ -9482,7 +9576,7 @@ body {
 
 .nav-tabs .nav-link.active {
   border: none;
-  color: #d44e27;
+  color: #19b491;
   background: transparent;
 }
 
@@ -9491,7 +9585,7 @@ body {
 }
 
 .nav-tabs > li > a::after {
-  bottom: -1px;
+  bottom: 0px;
 }
 
 .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after {
