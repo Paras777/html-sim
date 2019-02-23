@@ -14588,7 +14588,21 @@ return jQuery;
 },{}],4:[function(require,module,exports){
 (function (global){
 global.jQuery = require('jquery');
-bootstrap = require('bootstrap');
 mustache = require('mustache');
+
+
+jQuery(document).ready(function($){
+    alert('hello')
+    var jqxhr = $.getJSON('data.json', function(){
+
+    }).done(function(data){
+        var template = $('#template').html();
+        var showTemplate = mustache.render(template, data);
+        ('#gallery').html(showTemplate);
+    });
+    
+});
+
+var bootstrap = require('bootstrap');
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"bootstrap":1,"jquery":2,"mustache":3}]},{},[4])

@@ -28,8 +28,10 @@
     "gulp-browserify": "^0.5.1",
     "gulp-concat": "^2.6.1",
     "gulp-cssmin": "^0.2.0",
+    "gulp-imagemin": "^5.0.3",
     "gulp-inject-partials": "^1.0.4",
     "gulp-minify": "^3.1.0",
+    "gulp-newer": "^1.4.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "jquery": "^3.3.1",
@@ -37,6 +39,7 @@
     "mustache": "^3.0.1"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.6"
+    "bootstrap": "^4.0.0-alpha.6",
+    "tether": "^1.4.5"
   }
 }

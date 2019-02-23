@@ -1,0 +1,42 @@
+.result-single-col{
+        display: inline-flex;
+        width: 100%;
+        @extend %border-b;
+    span.text-caps{
+        text-transform: uppercase;
+        color: $fontColorLightGrey;
+        font-size: 0.5rem;
+        letter-spacing: .7px;
+        @extend %marginTop-3;
+        @extend %fontWeight600;
+    }
+    h6{
+        font-size: 1rem;
+        color: $fontColorGreyHeading;
+        @extend %marginTop-5;
+        @extend %fontWeight600;
+    }
+    p{
+        font-size: 0.9rem;
+        color: $fontColorGreyHeading;
+        @extend %marginTop-5;
+        @extend %fontWeight400;
+    }
+    .image-size{
+        height: 64px;
+        width: 64px;
+    }
+    .contacts{
+        padding-top: 16px;
+        a{
+            color: $cnay;
+            display: block;
+        }
+        a.call{
+            // 
+        }
+        a.e-mail{
+            // 
+        }
+    }
+}

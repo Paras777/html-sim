@@ -1,0 +1,92 @@
+.nav-tabs {
+    border-bottom: solid 2px #d1d1d1;
+    margin-bottom: 1rem;
+    > li {
+      &.active > a {
+        border-width: 0;
+        opacity: 0.8;
+        &:focus, &:hover {
+          border-width: 0;
+          opacity: 0.8;
+        }
+      }
+      > a {
+        position: relative;
+        border: none;
+        color: #666;
+        text-transform: uppercase;
+        padding-bottom: 15px;
+        text-align: left;
+        color: #171717;
+      }
+    }
+  }
+  
+  .nav.nav-tabs > li > a {
+    color: #bbb;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 40px;
+    border: 0 none;
+  }
+  
+  .nav-tabs {
+    > li {
+      &.active {
+        > a, > a {
+          border: none;
+          color: #d44e27;
+          background: transparent;
+        }
+      }
+      > a {
+        &:hover {
+          border: none;
+          color: #d44e27;
+          background: transparent;
+        }
+        &::after {
+          content: "";
+          background: #d44e27;
+          height: 2px;
+          position: absolute;
+          width: 100%;
+          left: 0px;
+          bottom: -1px;
+          transition: all 250ms ease 0s;
+          transform: scale(0);
+        }
+      }
+      > a:hover {
+        border: none;
+        color: #d44e27;
+        background: transparent;
+      }
+    }
+    .nav-link {
+      &.active {
+        border: none;
+        color: #d44e27;
+        background: transparent;
+        &::after {
+          transform: scale(1);
+        }
+      }
+      border: 0 none;
+    }
+    > li > a::after {
+      bottom: -1px;
+    }
+    > li {
+      &.active > a::after, &:hover > a::after {
+        transform: scale(1);
+      }
+    }
+  }
+
+.tab-content{
+   padding: 0;
+   .tab-pane {
+        padding: 0;
+    }
+}

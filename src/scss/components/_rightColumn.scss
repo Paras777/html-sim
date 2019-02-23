@@ -1,0 +1,21 @@
+.search-right-col{
+    width: 332px;
+    .image-size{
+        height: 40px;
+        width: 40px;
+    }
+    p span{
+        color: $cnay;
+    }
+    .result-single-col{
+        @extend %borderNone;
+    }
+    h3{
+        padding-bottom: 0.6rem;
+        font-size: 1.25rem;
+        @extend %border-b;
+    }
+}
+.borderLeft{
+    border-left: 1px solid $borderSeparatorColor;
+}

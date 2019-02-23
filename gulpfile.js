@@ -9,18 +9,22 @@ var mearge = require('merge-stream');
 var rename = require('gulp-rename');
 var cssmin = require('gulp-cssmin');
 var minify = require('gulp-minify');
+var newer = require('gulp-newer');
+var imagemin = require('gulp-imagemin');
 
 var source = {
     sassSource : 'src/scss/*.scss',
     htmlSource: 'src/*.html',
     htmlPartialSource: 'src/partial/*.html',
-    jsSource: 'src/js/**'
+    jsSource: 'src/js/**',
+    imgSource: 'src/img/**'
 };
 
 var path = {
     root: 'app/',
     css: 'app/css',
-    js: 'app/js'
+    js: 'app/js',
+    img: 'app/img'
 };
 
 gulp.task('sass', function(){
@@ -55,6 +59,14 @@ gulp.task('compress', function(){
         .pipe(gulp.dest('app/js'))
 });
 
+
+gulp.task('images', function(){
+    return gulp.src(source.imgSource)
+        .pipe(newer(path.img))
+        .pipe(imagemin())
+        .pipe(gulp.dest(path.img))
+});
+
 gulp.task('comprescss', function(){
     var bootstrapCSS = gulp.src('./node_modules/bootstrap/dist/css/bootstrap.css');
     var sassFiles;
@@ -69,4 +81,4 @@ gulp.task('comprescss', function(){
             .pipe(gulp.dest('app/css'))
 });
 
-gulp.task('default', gulp.series('sass', 'html', 'scripts', 'compress', 'comprescss'));
+gulp.task('default', gulp.series('sass', 'html', 'scripts', 'compress', 'comprescss', 'images'));
