@@ -9367,6 +9367,15 @@ h1, h2, h3, h4, h4, h5, h6, a {
   .search-left-col {
     padding-right: 15px;
   }
+  #left-col {
+    max-width: calc(100% - 332px) !important;
+    flex: inherit;
+    -webkit-flex: inherit;
+    -ms-flex: inherit;
+  }
+  #right-col {
+    max-width: 300px;
+  }
 }
 
 @media (max-width: 576px) {

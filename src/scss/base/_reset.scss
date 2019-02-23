@@ -34,6 +34,15 @@
     .search-left-col{
         padding-right: 15px;
     }
+    #left-col{
+        max-width: calc(100% - 332px) !important;
+        flex: inherit;
+        -webkit-flex: inherit;
+        -ms-flex: inherit;
+    }
+    #right-col{
+        max-width: 300px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
